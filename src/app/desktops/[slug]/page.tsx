@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { db } from "@/lib/db";
-import { ChevronRight, ShoppingCart, Zap } from "lucide-react";
+import { ChevronRight, Zap } from "lucide-react";
+import { AddToCartButton } from "@/components/add-to-cart-button";
 
 export default async function DesktopDetailPage({
   params,
@@ -111,10 +112,13 @@ export default async function DesktopDetailPage({
               })}
             </p>
 
-            <button className="w-full bg-black text-white rounded-lg py-3 px-4 text-sm font-medium flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors mb-3">
-              <ShoppingCart className="h-4 w-4" strokeWidth={1.5} />
-              Add to cart
-            </button>
+            <AddToCartButton
+              id={desktop.id}
+              type="desktop"
+              name={desktop.name}
+              slug={desktop.slug}
+              price={desktop.price}
+            />
 
             <button className="w-full border border-gray-300 rounded-lg py-3 px-4 text-sm font-medium flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors">
               <Zap className="h-4 w-4" strokeWidth={1.5} />
