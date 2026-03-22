@@ -35,7 +35,7 @@ export function DesktopCard({
         </div>
       </Link>
       <div className="p-4">
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center gap-2 mb-3">
           <div className="inline-block bg-black text-white text-sm font-bold px-3 py-1 rounded">
             {price.toLocaleString("de-DE", {
               minimumFractionDigits: 2,
