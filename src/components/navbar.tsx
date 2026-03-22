@@ -59,14 +59,6 @@ export function Navbar() {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="flex items-center gap-5">
-          <button className="text-gray-600 hover:text-black transition-colors">
-            <User className="h-5 w-5" strokeWidth={1.5} />
-          </button>
-          <button className="text-gray-600 hover:text-black transition-colors">
-            <ShoppingBag className="h-5 w-5" strokeWidth={1.5} />
-          </button>
           <div ref={searchAreaRef} className="flex items-center">
             <div
               className="overflow-hidden transition-all duration-300 ease-in-out"
@@ -98,6 +90,14 @@ export function Navbar() {
               </button>
             )}
           </div>
+        </div>
+        <div className="flex items-center gap-5">
+          <button className="text-gray-600 hover:text-black transition-colors">
+            <User className="h-5 w-5" strokeWidth={1.5} />
+          </button>
+          <button className="text-gray-600 hover:text-black transition-colors">
+            <ShoppingBag className="h-5 w-5" strokeWidth={1.5} />
+          </button>
         </div>
       </nav>
     </header>
